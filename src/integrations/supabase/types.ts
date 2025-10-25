@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      reports: {
+        Row: {
+          created_at: string | null
+          description: string
+          id: string
+          image_url: string | null
+          issue_type: string
+          location_address: string | null
+          location_lat: number | null
+          location_lng: number | null
+          threat_level: Database["public"]["Enums"]["threat_level"] | null
+        }
+        Insert: {
+          created_at?: string | null
+          description: string
+          id?: string
+          image_url?: string | null
+          issue_type: string
+          location_address?: string | null
+          location_lat?: number | null
+          location_lng?: number | null
+          threat_level?: Database["public"]["Enums"]["threat_level"] | null
+        }
+        Update: {
+          created_at?: string | null
+          description?: string
+          id?: string
+          image_url?: string | null
+          issue_type?: string
+          location_address?: string | null
+          location_lat?: number | null
+          location_lng?: number | null
+          threat_level?: Database["public"]["Enums"]["threat_level"] | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +58,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      threat_level: "high" | "medium" | "low"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +185,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      threat_level: ["high", "medium", "low"],
+    },
   },
 } as const
