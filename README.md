@@ -1,6 +1,6 @@
 ## Project info
 
-**URL**: https://lovable.dev/projects/4aeee336-1938-4ad9-bce4-6f244b796836
+#Raise Complains regarding the potholes on your area with immediate tagging to the local authorities 
 
 ## How can I edit this code?
 
